@@ -136,7 +136,7 @@ class KnowledgeRepository(with_metaclass(SubclassRegisteringABCMeta, object)):
                         add_revisions(revision_dict, uri)
                     else:
                         raise ValueError("Unrecognised uri: {}".format(uri))
-            add_revisions(revision_dict, self.uri)
+            add_revisions(revision_dict, self.uris)
             return revision_dict
 
         raise ValueError("Unrecognised KnowledgeRepository.uri: {}".format(self.uri))
